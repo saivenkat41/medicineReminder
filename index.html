@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Medicine Reminder</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h2>Smart Medicine Reminder</h2>
+    <label>Medicine Name:</label>
+    <input type="text" id="medicine" placeholder="Enter medicine name">
+    <br>
+    <label>Reminder Time:</label>
+    <input type="time" id="reminderTime">
+    <br>
+    <button onclick="setReminder()">Set Reminder</button>
+    <h3>Active Reminders</h3>
+    <div id="reminderList" class="reminder-list"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Medicine Reminder!</h3>
+            <p id="medicineName"></p>
+            <button class="snooze-btn" onclick="snoozeReminder()">Snooze 5 min</button>
+            <button class="taken-btn" onclick="markAsTaken()">Taken</button>
+            <button class="delete-btn" onclick="closeModal()">Dismiss</button>
+        </div>
+    </div>
+    <audio id="notificationSound" src="https://www.myinstants.com/media/sounds/alarm.mp3"></audio>
+    <script src="./script.js"></script>
+</body>
+</html>
